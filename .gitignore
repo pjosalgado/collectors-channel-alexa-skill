@@ -1,0 +1,4 @@
+amzn1.ask.skill.*.zip
+amzn1.ask.skill.*
+amzn1.ask.skill/skill.json
+amzn1.ask.skill/lambda/.env

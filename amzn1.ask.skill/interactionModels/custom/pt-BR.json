@@ -1,0 +1,91 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "canal do colecionador",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "PriceCurrentIntent",
+          "slots": [
+            {
+              "name": "title",
+              "type": "AMAZON.Person"
+            },
+            {
+              "name": "title_type",
+              "type": "TitleType"
+            },
+            {
+              "name": "site",
+              "type": "Site"
+            }
+          ],
+          "samples": [
+            "Alexa pergunte ao Canal do Colecionador qual é o preço de {title} na {site}",
+            "Alexa comece o Canal do Colecionador e pergunte qual é o preço de {title} em {title_type} na {site}",
+            "Qual é o preço de {title} na {site}",
+            "Qual é o preço de {title} em {title_type} na {site}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Blu-ray"
+              }
+            },
+            {
+              "name": {
+                "value": "DVD"
+              }
+            }
+          ],
+          "name": "TitleType"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Vídeo Pérola"
+              }
+            },
+            {
+              "name": {
+                "value": "The Originals"
+              }
+            },
+            {
+              "name": {
+                "value": "Fam DVD"
+              }
+            },
+            {
+              "name": {
+                "value": "Amazon"
+              }
+            }
+          ],
+          "name": "Site"
+        }
+      ]
+    }
+  },
+  "version": "26"
+}
