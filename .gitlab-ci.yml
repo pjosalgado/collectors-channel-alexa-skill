@@ -1,0 +1,7 @@
+image: python:3.9-slim
+
+stages:
+  - test
+
+include:
+  - template: Security/SAST.gitlab-ci.yml
