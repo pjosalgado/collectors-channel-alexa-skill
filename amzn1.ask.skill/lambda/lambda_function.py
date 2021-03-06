@@ -24,6 +24,8 @@ load_dotenv(os.path.join(os.getcwd(), '.env'))
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
+SITES_AVAILABLE = ['amazon', 'colecioneclassicos', 'famdvd', 'theoriginals', 'videoperola']
+
 
 class PriceCurrentIntentHandler(AbstractRequestHandler):
     
@@ -40,6 +42,15 @@ class PriceCurrentIntentHandler(AbstractRequestHandler):
         
         title_param, title_type_param, site_param = prepare_query_params(title_arg, title_type_arg, site_arg)
         logger.info('Slots prepared: title=<{}>, title_type=<{}>, site=<{}>'.format(title_param, title_type_param, site_param))
+        
+        if site_param not in SITES_AVAILABLE: 
+            speak_output = 'Desculpe, mas ainda não busco por títulos na {}'.format(site_arg)
+            return (
+                handler_input.response_builder
+                    .speak(speak_output)
+                    .ask(speak_output)
+                    .response
+            )
         
         client, col = connect_to_mongodb(site_param)
         result = find_in_mongodb(col, title_param, title_type_param)

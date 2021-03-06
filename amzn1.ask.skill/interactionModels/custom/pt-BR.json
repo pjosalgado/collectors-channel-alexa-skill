@@ -63,6 +63,11 @@
           "values": [
             {
               "name": {
+                "value": "Colecione Clássicos"
+              }
+            },
+            {
+              "name": {
                 "value": "Vídeo Pérola"
               }
             },
@@ -87,5 +92,5 @@
       ]
     }
   },
-  "version": "26"
+  "version": "27"
 }
