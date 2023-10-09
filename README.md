@@ -1,5 +1,5 @@
 Example Phrases: 
-- Alexa, comece o Canal do Colecionador e pergunte qual é o preço de Coringa, em Blu-ray, na Vídeo Pérola.
+- Alexa, comece o Canal do Colecionador e pergunte qual é o preço de Coringa, em Blu-ray, na Vídeo Pérola
 - Qual é o preço de Sherlock Holmes na The Originals?
 - Me ajude!
 

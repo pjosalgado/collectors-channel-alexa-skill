@@ -1,7 +1,6 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "canal do colecionador",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -20,7 +19,23 @@
           "samples": []
         },
         {
-          "name": "PriceCurrentIntent",
+          "slots": [],
+          "name": "HelloWorldIntent",
+          "samples": [
+            "olá",
+            "como vai você",
+            "diga oi mundo",
+            "diga oi",
+            "oi",
+            "diga olá mundo",
+            "diga olá"
+          ]
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
           "slots": [
             {
               "name": "title",
@@ -35,11 +50,12 @@
               "type": "Site"
             }
           ],
+          "name": "PriceCurrentIntent",
           "samples": [
-            "Alexa pergunte ao Canal do Colecionador qual é o preço de {title} na {site}",
-            "Alexa comece o Canal do Colecionador e pergunte qual é o preço de {title} em {title_type} na {site}",
+            "Qual é o preço de {title} em {title_type} na {site}",
             "Qual é o preço de {title} na {site}",
-            "Qual é o preço de {title} em {title_type} na {site}"
+            "Alexa comece o Canal do Colecionador e pergunte qual é o preço de {title} em {title_type} na {site}",
+            "Alexa pergunte ao Canal do Colecionador qual é o preço de {title} na {site}"
           ]
         }
       ],
@@ -63,17 +79,17 @@
           "values": [
             {
               "name": {
-                "value": "Colecione Clássicos"
+                "value": "iMusic BR"
               }
             },
             {
               "name": {
-                "value": "Vídeo Pérola"
+                "value": "Versátil"
               }
             },
             {
               "name": {
-                "value": "The Originals"
+                "value": "Amazon"
               }
             },
             {
@@ -83,14 +99,24 @@
             },
             {
               "name": {
-                "value": "Amazon"
+                "value": "The Originals"
+              }
+            },
+            {
+              "name": {
+                "value": "Vídeo Pérola"
+              }
+            },
+            {
+              "name": {
+                "value": "Colecione Clássicos"
               }
             }
           ],
           "name": "Site"
         }
-      ]
+      ],
+      "invocationName": "canal do colecionador"
     }
-  },
-  "version": "27"
+  }
 }

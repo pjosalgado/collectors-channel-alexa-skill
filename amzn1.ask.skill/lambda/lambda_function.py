@@ -24,7 +24,15 @@ load_dotenv(os.path.join(os.getcwd(), '.env'))
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-SITES_AVAILABLE = ['amazon', 'colecioneclassicos', 'famdvd', 'theoriginals', 'videoperola']
+SITES_AVAILABLE = [
+    'amazon',
+    'colecioneclassicos',
+    'famdvd',
+    'imusicbr',
+    'theoriginals',
+    'versatil',
+    'videoperola'
+]
 
 
 class PriceCurrentIntentHandler(AbstractRequestHandler):
@@ -126,7 +134,7 @@ class HelpIntentHandler(AbstractRequestHandler):
         return ask_utils.is_intent_name("AMAZON.HelpIntent")(handler_input)
 
     def handle(self, handler_input):
-        speak_output = "Você pode me perguntar por preços de DVDs e Blu-rays na Amazon, Fam DVD, The Originals e Vídeo Pérola."
+        speak_output = "Você pode me perguntar por preços de DVDs e Blu-rays nos sites mais populares do Brasil"
         return (
             handler_input.response_builder
                 .speak(speak_output)
